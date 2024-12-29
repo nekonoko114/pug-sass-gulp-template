@@ -1,0 +1,17 @@
+{
+  "printWidth": 80,
+  "tabWidth": 2,
+  "useTabs": false,
+  "singleQuote": true,
+  "trailingComma": "none",
+  "bracketSpacing": true,
+  "htmlWhitespaceSensitivity": "strict",
+  "proseWrap": "preserve",
+  "plugins": ["prettier-plugin-pug"],
+  "pugPrintWidth": 80,
+  "pugSingleQuote": true,
+  "pugTabWidth": 2,
+  "pugBracketSpacing": true,
+  "pugSortAttributes": "asc",
+  "pugWrapAttributesThreshold": 1
+}

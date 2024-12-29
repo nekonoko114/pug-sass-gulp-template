@@ -1,0 +1,66 @@
+extends layouts/layout.pug
+
+block content
+  section.l-about#about
+    .l-about-wrapper
+      h2.l-about-title About
+      span.l-about-sbtitle 概要
+      ul.l-about-cards
+        -
+          const cardData = [
+            {
+              img: "3.jpg",
+              data: "2024/05/01",
+              cat: "行事",
+              title: "新人研修を行いました",
+              text: "これはサンプルテキストですこれはサンプルテキストですこれはサンプルテキストです",
+              link: "news3.html"
+            },
+            {
+              img: "2.jpg",
+              data: "2024/08/10",
+              cat: "田西",
+              title: "新人研修を行いました",
+              text: "これはサンプルテキストですこれはサンプルテキストですこれはサンプルテキストです",
+              link: "news3.html"
+            }
+          ]
+        each val, i in cardData
+          li.l-about-card
+            a.l-about-card__link(href=val.link)
+              time.l-about-card__data(datetime=val.data) #{val.data}
+              .l-about-card__img
+                img(src="assets/news/image-" + val.img, alt=val.title)
+              h3.l-about-card__title #{val.title}
+              p.l-about-card__text #{val.text}
+
+  section.l-service
+    .l-service-wrapper
+      h2.l-service-title SERVICE
+      p.l-service-sutitle サービス
+      ul.l-service-cards
+        -
+          const serviceData = [
+            {
+              img: "01.jpg",
+              title: "モバイル事業",
+              subtitle: "大手キャリアと取引事例ありです",
+              text: "こちらはサンプルです。"
+            }
+          ]
+        each val, i in serviceData
+          li.l-service-card
+            .l-service-card__img
+              img(src="assets/images/service-" + val.img, alt=val.title)
+            h3.l-service-card__title #{val.title}
+            span.l-service-card__subtitle #{val.subtitle}
+            p.l-service-card__text #{val.text}
+
+  section.l-news
+    .l-news-wrapper
+      h2.l-news-title News
+      p.l-news-subtitle ニュース
+      dl.l-news__dl
+        dt.l-news__dt
+          span 新着
+        dd.l-news__dd 内容が入ります
